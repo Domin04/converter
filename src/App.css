@@ -28,14 +28,14 @@ body{
   border-radius: 10px;
   background-color: rgba(12, 82, 233, 0.274);
   width: 30%;
-  min-height: 40vh;
+  min-height: 50px;
   display: grid;
   grid-template-rows:9.523% 9.523% 9.523% 9.523% 9.523% 9.523% 14.285% 14.285% 14.285%;
   grid-template-columns:9.523% 32.977% 15% 32.9777% 9.523% ;
 }
 .onebox{
   grid-column: 2;
-  grid-row: 4/6;
+  grid-row: 2/4;
   border-radius: 7px;
   text-align: center;
   border: 2px solid rgba(11, 15, 224, 0.836);
@@ -45,7 +45,26 @@ body{
 .twobox{
   text-align: center;
   grid-column: 4;
-  grid-row: 4/6;
+  grid-row: 2/4;
+  border-radius: 7px;
+  border: 2px solid rgba(11, 15, 224, 0.836);
+  font-weight: bolder;
+  outline: none;
+}
+.threebox{
+  grid-column: 2;
+  grid-row: 8/6;
+  border-radius: 7px;
+  text-align: center;
+  border: 2px solid rgba(11, 15, 224, 0.836);
+  font-weight: bolder;
+  outline: none;
+}
+.fourbox{
+  text-align: center;
+  grid-column: 4;
+  grid-row: 8/6;
+  border-radius: 7px;
   border: 2px solid rgba(11, 15, 224, 0.836);
   font-weight: bolder;
   outline: none;
@@ -56,18 +75,28 @@ body{
   text-align: center;
   color: white;
 }
-.app button{
-  grid-column: 3/7;
-  grid-row: 8;
+#btn1{
+  grid-column: 1/7;
+  grid-row: 5;
   text-align: center;
   padding: 1px;
   outline: none;
   border: 2px solid rgba(11, 15, 224, 0.836);
   border-radius: 5px;
   width:100px;
-} 
+}
+#btn2{
+  grid-column: 1/7;
+  grid-row: 9;
+  text-align: center;
+  padding: 1px;
+  outline: none;
+  border: 2px solid rgba(11, 15, 224, 0.836);
+  border-radius: 5px;
+  width:100px;
+}
 .oneviewbox{
-  grid-row: 6/7;
+  grid-row: 4/5;
   grid-column: 2/3;
   border-radius: 5px;
   text-align-last: center;
@@ -75,7 +104,23 @@ body{
   border: 2px solid rgba(11, 15, 224, 0.836);
 }
 .twoviewbox{
-  grid-row: 6/7;
+  grid-row: 4/5;
+  grid-column: 4/5;
+  border-radius: 5px;
+  text-align-last : center;
+  background-color:rgba(12, 82, 233, 0.274);
+  border: 2px solid rgba(11, 15, 224, 0.836);
+}
+.threeboxview{
+  grid-row: 8/8;
+  grid-column: 2/3;
+  border-radius: 5px;
+  text-align-last: center;
+  background-color:rgba(12, 82, 233, 0.274);
+  border: 2px solid rgba(11, 15, 224, 0.836);
+}
+.fourboxview{
+  grid-row: 8/8;
   grid-column: 4/5;
   border-radius: 5px;
   text-align-last : center;
@@ -114,8 +159,9 @@ body{
   border-radius: 5px;
 }
 .app button{
-  grid-column: 3/5;
+  grid-column: 2/5;
   border-radius: 3px;
+  margin:0 auto;
 }
 .info{
   width: 50%;
@@ -124,7 +170,4 @@ body{
   top: 65%;
   border-radius: 10px;
   text-align: center;
-}
-.oneviewbox,.twoviewbox{
-  font-size: 10px;
 }
