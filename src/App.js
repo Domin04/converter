@@ -219,187 +219,79 @@ const [value4, setValue4] = useState(null);
 const convertBut2 = () =>{
   var calc = value3;
   switch (unit3) {
-     case 'km':
+     case 'g':
           switch (unit4) {
-                 case 'm':
-                     setValue4(+calc*1000)
+                 case 'dag':
+                     setValue4(+calc/10)
                      break;
-                 case 'km':
+                 case 'g':
                      setValue4(+calc)
                      break;
-                 case 'cm':
-                     setValue4(+calc*100000)
+                 case 'kg':
+                     setValue4(+calc/1000)
                      break;
-                 case 'mm':
-                     setValue4(+calc*1000000)
-                     break;
-                 case 'f':
-                     setValue4(+calc*3280.8)
-                     break;
-                 case 'i':
-                     setValue4(+calc*39370.07874)
-                     break;
-                 case 'y':
-                     setValue4(+calc*1093.6)
-                     break;
-                 case 'mi':
-                     setValue4(+calc*0.6214)
+                 case 't':
+                     setValue4(+calc/1000000)
                      break;
              default:
                  break;
          }
          break;
-     case 'm':
+     case 'dag':
          switch (unit4) {
-             case 'm':
+             case 'dag':
                  setValue4(+calc)
                  break;
-             case 'km':
-                 setValue4(+calc/1000)
+             case 'g':
+                 setValue4(+calc*10)
                  break;
-             case 'cm':
-                 setValue4(+calc/0.010000)
+             case 'kg':
+                 setValue4(+calc/100)
                  break;
-             case 'mm':
-                 setValue4(+calc/0.0010000)
-                 break;
-             case 'f':
-                 setValue4(+calc*3.2808)
-                 break;
-             case 'i':
-                 setValue4(+calc*39.370)
-                 break;
-             case 'y':
-                 setValue4(+calc*1.0936)
-                 break;
-             case 'mi':
-                 setValue4(+calc*0.00062137)
+             case 't':
+                 setValue4(+calc/100000)
                  break;
                default:
                 break;
      }             
          break;
-     case 'cm':
+     case 'kg':
          switch (unit4) {
-             case 'm':
-                 setValue4(+calc/100.00)
+             case 'g':
+                 setValue4(+calc*1000)
                  break;
-             case 'km':
-                 setValue4(+calc/100000)
+             case 'dag':
+                 setValue4(+calc*100)
                  break;
-             case 'cm':
+             case 'kg':
                  setValue4(+calc)
                  break;
-             case 'mm':
-                 setValue4(+calc/0.10000)
-                 break;
-             case 'f':
-                 setValue4(+calc*0.032808)
-                 break;
-             case 'i':
-                 setValue4(+calc*0.39370)
-                 break;
-             case 'y':
-                 setValue4(+calc*0.010936)
-                 break;
-             case 'mi':
-                 setValue4(+calc*0.0000062137)
+             case 't':
+                 setValue4(+calc/1000)
                  break;
          default:
              break; 
          }            
          break;
-     case 'mm':
+     case 't':
          switch (unit4) {
-             case 'm':
-                 setValue4(+calc/1000.0)
-                 break;
-             case 'km':
+             case 'g':
                  setValue4(+calc/1000000)
                  break;
-             case 'cm':
-                 setValue4(+calc/10.000)
+             case 'dag':
+                 setValue4(+calc/100000)
                  break;
-             case 'mm':
+             case 'kg':
+                 setValue4(+calc/1000)
+                 break;
+             case 't':
                  setValue4(+calc)
-                 break;
-             case 'f':
-                 setValue4(+calc*0.0032808)
-                 break;
-             case 'i':
-                 setValue4(+calc*0.039370)
-                 break;
-             case 'y':
-                 setValue4(+calc*0.0010936)
-                 break; 
-             case 'mi':
-                 setValue4(+calc*0.00000062137)
                  break;
          default:
              break;
          }
          break;
-     case 'mi':
-         switch (unit4) {
-             case 'm':
-                 setValue4(+calc/0.00062137)
-                 break;
-             case 'km':
-                 setValue4(+calc/0.62137)
-                 break;
-             case 'cm':
-                 setValue4(+calc/0.0000062137)
-                 break;
-             case 'mm':
-                 setValue4(+calc/0.00000062137)
-                 break;
-             case 'f':
-                 setValue4(+calc*5280.0)
-                 break;
-             case 'i':
-                 setValue4(+calc*63360)
-                 break;
-             case 'y':
-                 setValue4(+calc*1760.0)
-                 break;
-             case 'mi':
-                 setValue4(+calc)
-                 break;
-             default:
-             break;
-         }
-         break;
-     case 'y':
-         switch (unit4) {
-             case 'm':
-                     setValue4(+calc/1.0936)
-                     break;
-             case 'km':
-                     setValue4(+calc/1093.6)
-                     break;
-             case 'cm':
-                     setValue4(+calc/0.010936)
-                     break;
-             case 'mm':
-                     setValue4(+calc/0.0010936)
-                     break;
-             case 'f':
-                     setValue4(+calc*3.0000)
-                     break;
-             case 'i':
-                     setValue4(+calc*36.000)
-                     break;
-             case 'y':
-                     setValue4(+calc)
-                     break;
-             case 'mi':
-                     setValue4(+calc*0.00056818)
-                     break;
-                 default:
-                     break;
-                     }
-          break;
-     }
+        }
 }
 
     return (
@@ -462,9 +354,18 @@ const convertBut2 = () =>{
                     <li>Milimetry</li>
                     <li>Mile</li>
                     <li>Jard</li>
+                    <li id="brake"></li>
+                    <li>Gramy</li>
+                    <li>Dekagramy</li>
+                    <li>Kilogramy</li>
+                    <li>Tony</li>
                 </ul>
             </div>
+          <footer>
+          <p>Autor: Dominik Sodo, Jakub Radaszkiewicz</p>
+          </footer>
         </div>
+
     )
 }
 
