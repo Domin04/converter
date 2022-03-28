@@ -31,7 +31,7 @@ const [value4, setValue4] = useState(null);
   setValue3(e.target.value);
 }
 
- const convertBut = () =>{
+ const convert = () =>{
   var calc = value1;
   switch (unit1) {
      case 'km':
@@ -216,7 +216,7 @@ const [value4, setValue4] = useState(null);
           break;
      }
 }
-const convertBut2 = () =>{
+const convert2 = () =>{
   var calc = value3;
   switch (unit3) {
      case 'g':
@@ -301,7 +301,7 @@ const convertBut2 = () =>{
             </div>
             <div className='app'>
                 <input className='onebox' placeholder='' value={value1} onChange={(e)=>settingVal(e)} />
-                <button id="btn1" onClick={()=>convertBut()}>Przekonwertuj</button>
+                <button id="btn1" onClick={()=>convert()}>Przekonwertuj</button>
                 <input className='twobox' placeholder=''  value={value2}/>
                 <select className='oneviewbox' onChange={(e)=>look(e)}>
                     <option selected='selected'>Wybierz jednostke</option>
@@ -326,7 +326,7 @@ const convertBut2 = () =>{
 
 
                 <input className='threebox' placeholder='' value={value3} onChange={(e)=>settingVal3(e)} />
-                <button id="btn2" onClick={()=>convertBut2()}>Przekonwertuj</button>
+                <button id="btn2" onClick={()=>convert2()}>Przekonwertuj</button>
                 <input className='fourbox' placeholder=''  value={value4}/>
                 <select className='threeboxview' onChange={(e)=>look3(e)}>
                     <option selected='selected'>Wybierz jednostke</option>
